@@ -34,27 +34,27 @@ const Index = () => {
     {
       title: "Игрушка",
       description: "Их первый в жизни взмах крыльев — подарить свою самую любимую игрушку",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/522d5851-bb78-4f45-aa3e-57a20770a890.jpg"
     },
     {
       title: "Пирог",
       description: "Скромный знак внимания напомнил одинокой соседке, что о ней помнят.",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/737c4ac4-4df6-421f-81f5-074237b902de.jpg"
     },
     {
       title: "Прогулка",
       description: "Совсем немного времени равны вечности счастья для того, кто в нём нуждается.",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/6417480e-ef2a-41fc-a274-7121a5e3d27d.jpg"
     },
     {
       title: "Письмо",
       description: "Письма поддержки, которые согревают сердца пожилых людей",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/33b70f98-450b-488e-bacd-0a542076fd47.jpg"
     },
     {
       title: "Навык",
       description: "Он дарил вторую жизнь велосипедам, а детям — настоящее детство.",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/fe4dda7d-6035-4830-903d-d2cb3c3f34f3.jpg"
     }
   ];
 
@@ -85,17 +85,17 @@ const Index = () => {
     {
       name: "Анна Петрова",
       text: "Благодаря вашей помощи мы смогли обеспечить детей всем необходимым. Спасибо за вашу доброту!",
-      image: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/32267c09-35c5-426d-b7ae-725f960e2323.jpg"
+      image: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/62e5ae39-7c29-451d-af86-d2b744feb71f.jpg"
     },
     {
       name: "Михаил Сидоров",
       text: "Профессиональный подход и искренняя забота о людях. Рад, что есть такие организации!",
-      image: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/32267c09-35c5-426d-b7ae-725f960e2323.jpg"
+      image: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/2ae172da-61f4-40a8-a054-9d8d9c029f18.jpg"
     },
     {
       name: "Елена Иванова",
       text: "Ваша организация изменила нашу жизнь. Мы получили не только материальную помощь, но и моральную поддержку.",
-      image: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/32267c09-35c5-426d-b7ae-725f960e2323.jpg"
+      image: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/2e23c88c-160f-4daf-8ef5-3351c3f08206.jpg"
     }
   ];
 
@@ -185,34 +185,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="benefits" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Почему выбирают нас</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Мы создали экосистему доверия и прозрачности для эффективной благотворительности
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <Card 
-                key={index} 
-                className="border-2 hover:border-primary transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary via-secondary to-accent">
-                    <Icon name={benefit.icon as any} size={32} className="text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
@@ -342,13 +315,15 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center gap-6 mb-6">
             <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
-              <Icon name="Facebook" size={24} />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.125-.26 1.125-.668 0-.863-1.302-2.233-2.326-3.258-1.024-1.025-1.319-1.319-.882-2.326.619-1.424 2.326-4.421 2.326-5.748 0-.407-.274-.667-.881-.667h-3.2c-.808 0-.891.292-1.169.948-.398.935-1.476 3.513-2.489 3.513-.388 0-.775-.194-.775-.775v-3.686c0-.808-.194-1-.969-1h-4.8c-.388 0-.582.291-.582.484 0 .679.969.775.969 2.163v3.423c0 .808-.142.969-.388.969-.775 0-2.489-3.104-3.2-6.477-.194-.808-.388-1.169-1.196-1.169h-3.2c-.969 0-1.162.291-1.162.948 0 .871 2.326 7.548 5.168 11.453 1.894 2.617 4.573 4.034 7.007 4.034z"/>
+              </svg>
             </Button>
             <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
-              <Icon name="Instagram" size={24} />
+              <Icon name="Send" size={24} />
             </Button>
             <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
-              <Icon name="Twitter" size={24} />
+              <Icon name="MessageCircle" size={24} />
             </Button>
           </div>
           <p className="text-muted-foreground">
