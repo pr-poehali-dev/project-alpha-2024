@@ -156,3 +156,8 @@
     }
   }
 }
+
+.leaflet-container {
+  font-family: "Open Sans", sans-serif;
+  z-index: 1;
+}

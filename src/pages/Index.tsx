@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import CharityMap from "@/components/CharityMap";
 
 const Index = () => {
   const { toast } = useToast();
@@ -224,6 +225,18 @@ const Index = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши организации в Санкт-Петербурге</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Интерактивная карта благотворительных организаций города
+            </p>
+          </div>
+          <CharityMap />
         </div>
       </section>
 
