@@ -33,17 +33,17 @@ const Index = () => {
   const videos = [
     {
       title: "Игрушка",
-      description: "История о том, как простая игрушка изменила жизнь ребёнка",
+      description: "Их первый в жизни взмах крыльев — подарить свою самую любимую игрушку",
       thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
     },
     {
       title: "Пирог",
-      description: "Как совместная выпечка объединила соседей для помощи нуждающимся",
+      description: "Скромный знак внимания напомнил одинокой соседке, что о ней помнят.",
       thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
     },
     {
       title: "Прогулка",
-      description: "Волонтёры дарят радость прогулок людям с ограниченными возможностями",
+      description: "Совсем немного времени равны вечности счастья для того, кто в нём нуждается.",
       thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
     },
     {
@@ -53,7 +53,7 @@ const Index = () => {
     },
     {
       title: "Навык",
-      description: "Обучение новым профессиям для тех, кто хочет начать заново",
+      description: "Он дарил вторую жизнь велосипедам, а детям — настоящее детство.",
       thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
     }
   ];
