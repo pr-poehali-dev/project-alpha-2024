@@ -68,9 +68,9 @@ const Index = () => {
     <div className="min-h-screen">
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `url('https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/7c015606-9ae8-4287-95a1-dab762075066.jpg')`,
+            backgroundImage: `url('https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/6a533f4e-3e53-4ebc-9243-6b1e460de5a9.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
