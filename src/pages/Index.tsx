@@ -70,7 +70,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `url('https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/6a533f4e-3e53-4ebc-9243-6b1e460de5a9.jpg')`,
+            backgroundImage: `url('https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/966999f6-b6f5-472c-b4af-73f66412d5b5.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
