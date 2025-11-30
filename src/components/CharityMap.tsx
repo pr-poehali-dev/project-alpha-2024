@@ -1,17 +1,6 @@
-import { useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
-const markerIcon = new L.Icon({
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
 
 const charityLocations = [
   {
@@ -59,44 +48,54 @@ const charityLocations = [
 ];
 
 const CharityMap = () => {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<L.Map | null>(null);
+
   useEffect(() => {
-    delete (L.Icon.Default.prototype as any)._getIconUrl;
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+    if (!mapRef.current || mapInstanceRef.current) return;
+
+    const map = L.map(mapRef.current).setView([59.9311, 30.3609], 12);
+    mapInstanceRef.current = map;
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    const icon = L.icon({
       iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+      iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
       shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
     });
+
+    charityLocations.forEach((location) => {
+      const marker = L.marker(location.coordinates as L.LatLngExpression, { icon }).addTo(map);
+      
+      marker.bindPopup(`
+        <div style="padding: 8px;">
+          <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 4px;">${location.name}</h3>
+          <p style="font-size: 0.875rem; color: #666; margin-bottom: 8px;">${location.address}</p>
+          <p style="font-size: 0.875rem;">${location.description}</p>
+        </div>
+      `);
+    });
+
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
+      }
+    };
   }, []);
 
   return (
-    <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-2xl border-4 border-primary/20">
-      <MapContainer
-        center={[59.9311, 30.3609]}
-        zoom={12}
-        style={{ height: '100%', width: '100%' }}
-        scrollWheelZoom={false}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {charityLocations.map((location) => (
-          <Marker 
-            key={location.id} 
-            position={location.coordinates}
-            icon={markerIcon}
-          >
-            <Popup>
-              <div className="p-2">
-                <h3 className="font-bold text-lg mb-1">{location.name}</h3>
-                <p className="text-sm text-gray-600 mb-2">{location.address}</p>
-                <p className="text-sm">{location.description}</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-    </div>
+    <div 
+      ref={mapRef} 
+      className="w-full h-[600px] rounded-lg overflow-hidden shadow-2xl border-4 border-primary/20"
+    />
   );
 };
 
