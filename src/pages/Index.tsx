@@ -5,6 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Index = () => {
   const { toast } = useToast();
@@ -22,6 +29,34 @@ const Index = () => {
     });
     setFormData({ name: "", email: "", message: "" });
   };
+
+  const videos = [
+    {
+      title: "Игрушка",
+      description: "История о том, как простая игрушка изменила жизнь ребёнка",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+    },
+    {
+      title: "Пирог",
+      description: "Как совместная выпечка объединила соседей для помощи нуждающимся",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+    },
+    {
+      title: "Прогулка",
+      description: "Волонтёры дарят радость прогулок людям с ограниченными возможностями",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+    },
+    {
+      title: "Письмо",
+      description: "Письма поддержки, которые согревают сердца пожилых людей",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+    },
+    {
+      title: "Навык",
+      description: "Обучение новым профессиям для тех, кто хочет начать заново",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/bcf513cb-292b-4283-bd69-71ac3aa27075.jpg"
+    }
+  ];
 
   const benefits = [
     {
@@ -102,6 +137,50 @@ const Index = () => {
                 Узнать больше
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Истории добра</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Видеоролики о реальных историях помощи и поддержки
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {videos.map((video, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl cursor-pointer group">
+                      <CardContent className="p-0">
+                        <div className="relative aspect-video overflow-hidden rounded-t-lg bg-gradient-to-br from-primary/20 to-secondary/20">
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <Icon name="Play" size={32} className="text-white ml-1" />
+                            </div>
+                          </div>
+                          <img 
+                            src={video.thumbnail} 
+                            alt={video.title}
+                            className="w-full h-full object-cover opacity-50"
+                          />
+                        </div>
+                        <div className="p-6">
+                          <h3 className="text-xl font-bold mb-2">{video.title}</h3>
+                          <p className="text-muted-foreground text-sm">{video.description}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-0 -translate-x-1/2" />
+              <CarouselNext className="right-0 translate-x-1/2" />
+            </Carousel>
           </div>
         </div>
       </section>
