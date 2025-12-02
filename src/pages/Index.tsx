@@ -120,7 +120,7 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Благотворительный медиапроект о силе малых дел. Благотворительность не измеряется суммами, а начинается с готовности сделать свой, даже самый скромный, «взмах крыльев»
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 transition-all transform hover:scale-105"
@@ -128,14 +128,6 @@ const Index = () => {
               >
                 <Icon name="Heart" className="mr-2" size={24} />
                 Взмахнуть крылом
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-6 border-2 transition-all transform hover:scale-105"
-                onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Узнать больше
               </Button>
             </div>
           </div>
