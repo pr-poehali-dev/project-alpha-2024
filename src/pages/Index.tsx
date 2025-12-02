@@ -43,8 +43,8 @@ const Index = () => {
       thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/737c4ac4-4df6-421f-81f5-074237b902de.jpg"
     },
     {
-      title: "Прогулка",
-      description: "Совсем немного времени равны вечности счастья для того, кто в нём нуждается.",
+      title: "Спасённые лапки",
+      description: "Это история одной спасённой кошки, за которой видны десятки других, всё ещё ждущих своего шанса на жизнь",
       thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/6417480e-ef2a-41fc-a274-7121a5e3d27d.jpg"
     },
     {
