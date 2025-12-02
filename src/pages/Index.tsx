@@ -54,8 +54,8 @@ const Index = () => {
     },
     {
       title: "Стена",
-      description: "история матери-одиночки о том, как маленькие лишения крадут будущее её детей",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/2790b4b7-d2af-4990-b761-9b5360eae7c6.jpg"
+      description: "История матери-одиночки о том, как маленькие лишения крадут будущее её детей",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/fabaeddd-6a9a-4a64-95c7-529f794a348e.jpg"
     }
   ];
 
