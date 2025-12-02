@@ -45,17 +45,17 @@ const Index = () => {
     {
       title: "Спасённые лапки",
       description: "Это история одной спасённой кошки, за которой видны десятки других, всё ещё ждущих своего шанса на жизнь",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/6417480e-ef2a-41fc-a274-7121a5e3d27d.jpg"
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/afacecbc-c33e-439b-aafc-f1994474254e.jpg"
     },
     {
-      title: "Письмо",
-      description: "Письма поддержки, которые согревают сердца пожилых людей",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/33b70f98-450b-488e-bacd-0a542076fd47.jpg"
+      title: "Прямая трансляция",
+      description: "Он превратил свои донаты в реальную поддержку для тех, кто борется с жизненными трудностями.",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/81c43ab4-29d0-4b4b-9d0b-4553edc2efc2.jpg"
     },
     {
-      title: "Навык",
-      description: "Он дарил вторую жизнь велосипедам, а детям — настоящее детство.",
-      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/fe4dda7d-6035-4830-903d-d2cb3c3f34f3.jpg"
+      title: "Стена",
+      description: "история матери-одиночки о том, как маленькие лишения крадут будущее её детей",
+      thumbnail: "https://cdn.poehali.dev/projects/20769f67-e432-40b6-9875-0f2ed0ef918a/files/2790b4b7-d2af-4990-b761-9b5360eae7c6.jpg"
     }
   ];
 
